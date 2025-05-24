@@ -58,6 +58,11 @@
           state: present
           update_cache: yes
 
+    - name: Install mongoose package using npm
+      community.general.npm:
+        name: mongoose
+        path: /var/www/trur/
+        save: yes
 
     - name: Запустить и включить сервис mongod
       ansible.builtin.service:
